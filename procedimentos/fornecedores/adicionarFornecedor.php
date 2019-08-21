@@ -2,7 +2,7 @@
 
 session_start();
 require_once "../../classes/conexao.php";
-require_once "../../classes/clientes.php";
+require_once "../../classes/fornecedores.php";
 
 
 
@@ -11,7 +11,7 @@ $idusuario = $_SESSION['iduser'];
 
 
 
-$obj = new clientes();
+$obj = new fornecedores();
 
 
 
@@ -26,6 +26,6 @@ $dados=array(
 
 );
 
-echo $obj->adicionarCliente($dados);
+echo $obj->adicionarFornecedor($dados);
 
  ?>

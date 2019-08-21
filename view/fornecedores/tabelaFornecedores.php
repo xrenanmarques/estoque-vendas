@@ -5,7 +5,7 @@ require_once "../../classes/conexao.php";
 $c = new conectar();
 $conexao = $c->conexao();
 
-$sql = "SELECT id_cliente, nome, sobrenome, endereco, email, telefone, cpf FROM clientes";
+$sql = "SELECT id_fornecedor, nome, sobrenome, endereco, email, telefone, cpf FROM fornecedores";
 $result = mysqli_query($conexao, $sql);
 
 ?>
@@ -34,12 +34,12 @@ $result = mysqli_query($conexao, $sql);
         <td><?php echo $mostrar[5]; ?></td>
         <td><?php echo $mostrar[6]; ?></td>
         <td>
-            <span class="btn btn-warning btn-xs" data-toggle="modal" data-target="#abremodalClientesUpdate" onclick="adicionarDado('<?php echo $mostrar[0]; ?>')">
+            <span class="btn btn-warning btn-xs" data-toggle="modal" data-target="#abremodalFornecedoresUpdate" onclick="adicionarDado('<?php echo $mostrar[0]; ?>')">
                 <span class="glyphicon glyphicon-pencil"></span>
             </span>
         </td>
         <td>
-            <span class="btn btn-danger btn-xs" onclick="eliminarCliente('<?php echo $mostrar[0]; ?>')">
+            <span class="btn btn-danger btn-xs" onclick="eliminarFornecedor('<?php echo $mostrar[0]; ?>')">
                 <span class="glyphicon glyphicon-remove"></span>
             </span>
         </td>

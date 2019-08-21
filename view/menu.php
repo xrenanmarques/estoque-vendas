@@ -1,11 +1,12 @@
-
 <?php require_once "dependencias.php" ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <title></title>
 </head>
+
 <body>
 
   <!-- Begin Navbar -->
@@ -28,49 +29,52 @@
             <li class="active"><a href="inicio.php"><span class="glyphicon glyphicon-home"></span> Inicio</a>
             </li>
 
-            
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span> Gestão Produtos <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="categorias.php">Categorias</a></li>
-              <li><a href="#.php">Produtos</a></li>
-            </ul>
-          </li>
 
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt"></span> Gestão Produtos <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="categorias.php">Categorias</a></li>
+                <li><a href="produtos.php">Produtos</a></li>
+              </ul>
+            </li>
 
-       
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Pessoas <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="clientes.php">Clientes</a></li>
+                <li><a href="fornecedores.php">Fornecedores</a></li>
+              </ul>
+            </li>
 
+            <li><a href="#"><span class="glyphicon glyphicon-usd"></span> Vendas</a>
+            </li>
 
-           <li><a href="clientes.php"><span class="glyphicon glyphicon-user"></span> Clientes</a>
-          </li>
-          <li><a href="#"><span class="glyphicon glyphicon-usd"></span> Menu 3</a>
-          </li>
-          
-          <li class="dropdown" >
-            <a href="#" style="color: red"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Usuario:   <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li> <a style="color: red" href="../procedimentos/sair.php"><span class="glyphicon glyphicon-off"></span> Sair</a></li>
-              
-            </ul>
-          </li>
-        </ul>
+            <li class="dropdown">
+              <a href="#" style="color: red" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Usuario: <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li> <a style="color: red" href="../procedimentos/sair.php"><span class="glyphicon glyphicon-off"></span> Sair</a></li>
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
       </div>
-      <!--/.nav-collapse -->
+      <!--/.contatiner -->
     </div>
-    <!--/.contatiner -->
   </div>
-</div>
-<!-- Main jumbotron for a primary marketing message or call to action -->
+  <!-- Main jumbotron for a primary marketing message or call to action -->
 
 
 
 
 
-<!-- /container -->        
+  <!-- /container -->
 
 
 </body>
+
 </html>
 
 <script type="text/javascript">
@@ -79,11 +83,9 @@
       $('.logo').width(100);
       $('.logo').height(60);
 
-    }
-    else {
+    } else {
       $('.logo').height(100);
       $('.logo').width(150);
     }
-  }
-  );
+  });
 </script>
