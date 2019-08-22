@@ -7,6 +7,6 @@ require_once "../../classes/fornecedores.php";
 $id = $_POST['idfornecedor'];
 
 $obj = new fornecedores();
-echo $obj->excluirFornecedor($id);
+echo $obj->excluir($id);
 
 ?>

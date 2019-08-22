@@ -22,6 +22,6 @@ $dados=array(
 
 );
 
-echo $obj->atualizarFornecedor($dados);
+echo $obj->atualizar($dados);
 
  ?>

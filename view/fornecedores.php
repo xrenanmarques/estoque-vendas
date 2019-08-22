@@ -8,7 +8,7 @@ if(isset($_SESSION['usuario'])){
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<title>Fornecedores</title>
+		<title>fornecedores</title>
 		<?php require_once "menu.php"; ?>
 	</head>
 	<body>
@@ -30,7 +30,7 @@ if(isset($_SESSION['usuario'])){
 						<label>CPF</label>
 						<input type="text" class="form-control input-sm" id="cpf" name="cpf">
 						<p></p>
-						<span class="btn btn-primary" id="btnAdicionarFornecedor">Salvar</span>
+						<span class="btn btn-primary" id="btnAdicionarFornecedores">Salvar</span>
 					</form>
 				</div>
 				<div class="col-sm-8">
@@ -52,7 +52,7 @@ if(isset($_SESSION['usuario'])){
 					</div>
 					<div class="modal-body">
 						<form id="frmFornecedoresU">
-							<input type="text" hidden="" id="idclienteU" name="idforncedorU">
+							<input type="text" hidden="" id="idfornecedorU" name="idfornecedorU">
 							<label>Nome</label>
 							<input type="text" class="form-control input-sm" id="nomeU" name="nomeU">
 							<label>Sobrenome</label>
@@ -87,6 +87,8 @@ if(isset($_SESSION['usuario'])){
 				url:"../procedimentos/fornecedores/obterDadosFornecedor.php",
 				success:function(r){
 
+
+
 					dado=jQuery.parseJSON(r);
 
 
@@ -104,13 +106,14 @@ if(isset($_SESSION['usuario'])){
 			});
 		}
 
-		function eliminarFornecedor(idfornecedor){
+		function eliminar(idfornecedor){
 			alertify.confirm('Deseja Excluir este fornecedor?', function(){ 
 				$.ajax({
 					type:"POST",
 					data:"idfornecedor=" + idfornecedor,
 					url:"../procedimentos/fornecedores/eliminarFornecedor.php",
 					success:function(r){
+
 
 
 						if(r==1){
@@ -132,7 +135,7 @@ if(isset($_SESSION['usuario'])){
 
 			$('#tabelaFornecedoresLoad').load("fornecedores/tabelaFornecedores.php");
 
-			$('#btnAdicionarFornecedor').click(function(){
+			$('#btnAdicionarFornecedores').click(function(){
 
 				vazios=validarFormVazio('frmFornecedores');
 
@@ -150,8 +153,8 @@ if(isset($_SESSION['usuario'])){
 					success:function(r){
 
 						if(r==1){
-							$('#frmFornecedor')[0].reset();
-							$('#tabelaFornecedorLoad').load("fornecedores/tabelaFornecedores.php");
+							$('#frmFornecedores')[0].reset();
+							$('#tabelaFornecedoresLoad').load("fornecedores/tabelaFornecedores.php");
 							alertify.success("Fornecedor Adicionado");
 						}else{
 							alertify.error("Não foi possível adicionar");
@@ -173,8 +176,7 @@ if(isset($_SESSION['usuario'])){
 					url:"../procedimentos/fornecedores/atualizarFornecedor.php",
 					success:function(r){
 
-
-
+						
 						if(r==1){
 							$('#frmFornecedores')[0].reset();
 							$('#tabelaFornecedoresLoad').load("fornecedores/tabelaFornecedores.php");

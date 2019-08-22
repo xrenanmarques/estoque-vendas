@@ -26,6 +26,6 @@ $dados=array(
 
 );
 
-echo $obj->adicionarFornecedor($dados);
+echo $obj->adicionar($dados);
 
  ?>

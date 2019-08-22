@@ -6,7 +6,7 @@ require_once "../../classes/fornecedores.php";
 
 $obj = new fornecedores();
 
-echo json_encode($obj->obterDadosFornecedor($_POST['idfornecedor']));
+echo json_encode($obj->obterDados($_POST['idfornecedor']));
 
 
  ?>

@@ -35,7 +35,7 @@ require_once "../../classes/conexao.php";
 		<td><?php echo $mostrar[5]; ?></td>
 		<td><?php echo $mostrar[6]; ?></td>
 		<td>
-			<span class="btn btn-warning btn-xs" data-toggle="modal" data-target="#abremodalClientesUpdate" onclick="adicionarDado('<?php echo $mostrar[0]; ?>')">
+			<span class="btn btn-warning btn-xs" data-toggle="modal" data-target="#abremodalClienteUpdate" onclick="adicionarDado('<?php echo $mostrar[0]; ?>')">
 				<span class="glyphicon glyphicon-pencil"></span>
 			</span>
 		</td>
