@@ -43,7 +43,7 @@
 							<p></p>
 							<span class="btn btn-primary btn-sm" id="entrarSistema">Entrar</span>
 							<?php if(!$validar): ?>
-							<a href="registrar.php" class="btn btn-danger btn-sm">Registrar</a>
+							<a href="registrar.php" class="btn btn-default btn-sm">Registrar</a>
 
 							<?php 
 								endif;
