@@ -5,6 +5,6 @@
 
 	$obj= new usuarios();
 
-	echo json_encode($obj->obterDados($_POST['idusuario']));
+	echo $obj->excluir($_POST['idusuario']);
 
  ?>
